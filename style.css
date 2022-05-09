@@ -1,3 +1,17 @@
 body {
-    background: black 50% no-repeat url("https://c4.wallpaperflare.com/wallpaper/44/479/602/3planesoft-clocks-mechanics-wallpaper-preview.jpg");
+    background: black;
+}
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17D4FE;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+   
+
+
 }
