@@ -28,6 +28,8 @@
         s = checkTime(s);
         document.getElementById('txt2').innerHTML =  year+""+month+""+date+""+h+""+m+""+s;
         copyText = year+""+month+""+date+""+h+""+m+""+s
+        navigator.clipboard.writeText(copyText)
+        
       
         setTimeout(startTime, 1000);
       }
