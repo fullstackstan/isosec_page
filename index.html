@@ -7,7 +7,7 @@
     <title>Isosec Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="startTime()">
+<body onload="startTime(); myFunction()">
 
     <div class="clock" id="txt2"></div>
     <button onclick="myFunction()">Copy text</button>
@@ -28,7 +28,7 @@
         s = checkTime(s);
         document.getElementById('txt2').innerHTML =  year+""+month+""+date+""+h+""+m+""+s;
         copyText = year+""+month+""+date+""+h+""+m+""+s
-        navigator.clipboard.writeText(copyText)
+        
         
       
         setTimeout(startTime, 1000);
@@ -39,14 +39,8 @@
         return i;
       }
       function myFunction() {
-  
- 
-
    /* Copy the text inside the text field */
   navigator.clipboard.writeText(copyText);
-
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText);
 }
       </script>
 
