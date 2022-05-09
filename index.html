@@ -10,7 +10,9 @@
 <body onload="startTime()">
 
     <div class="clock" id="txt2"></div>
+    <button onclick="myFunction()">Copy text</button>
     <script>
+        let copyText
     function startTime() {
         const today = new Date();
         let year = today.getUTCFullYear();
@@ -25,6 +27,7 @@
         m = checkTime(m);
         s = checkTime(s);
         document.getElementById('txt2').innerHTML =  year+""+month+""+date+""+h+""+m+""+s;
+        copyText = year+""+month+""+date+""+h+""+m+""+s
       
         setTimeout(startTime, 1000);
       }
@@ -32,7 +35,18 @@
       function checkTime(i) {
         if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
         return i;
-      }</script>
+      }
+      function myFunction() {
+  
+ 
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+      </script>
 
     <script type="javascript" src="main.js"></script>
 </body>
